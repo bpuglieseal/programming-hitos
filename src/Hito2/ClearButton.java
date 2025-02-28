@@ -3,9 +3,8 @@ package Hito2;
 import javax.swing.*;
 import java.awt.*;
 
-public class ClearButton extends JButton {
+public class ClearButton extends BaseButton {
     ClearButton() {
-        this.setText("Clear");
-        this.setMargin(new Insets(4, 14, 4, 14));
+        super("Clear");
     }
 }

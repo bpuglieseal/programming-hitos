@@ -8,7 +8,8 @@ public class FilesCombobox extends JComboBox {
         this.addItem("python.txt");
         this.addItem("c.txt");
         this.addItem("java.txt");
-        this.setPreferredSize(new Dimension(200, 30));
-        this.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 5));
+        this.addItem("balda.txt");
+        this.setEditable(true);
+        this.setPreferredSize(new Dimension(250, 30));
     }
 }
