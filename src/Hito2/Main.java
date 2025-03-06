@@ -91,6 +91,7 @@ public class Main extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == this.filesCombobox) {
             String fileName = (String) filesCombobox.getSelectedItem();
+            textArea.setText("");
 
             if (fileName.isEmpty()) {
                 JOptionPane.showMessageDialog(null, String.format("El archivo \"%s\" o dato no es valido", fileName), "Warning: File", JOptionPane.WARNING_MESSAGE);
@@ -108,7 +109,7 @@ public class Main extends JFrame implements ActionListener {
                         line = br.readLine();
                     }
 
-                    textArea.append(sb.toString());
+                    textArea.setText(sb.toString());
                 } catch (FileNotFoundException fileNotFoundException) {
                     JOptionPane.showMessageDialog(null, String.format("El archivo \"%s\" no existe", fileName), "Error: File", JOptionPane.ERROR_MESSAGE);
                 } catch (Exception ex) {
